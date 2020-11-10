@@ -1,16 +1,16 @@
-filename = "female_first_names.txt"
+#filename = "female_first_names.txt"
 
-with open(filename) as file_object:
-    lines = file_object.readlines()
-for line in lines:
-     print(line.split())
+#with open(filename) as file_object:
+#    lines = file_object.readlines()
+#for line in lines:
+#     print(line.split())
 
-with open(filename,"r") as file_object:
-    """ Removes numbers and percentage symbol from text file """
-    contents = file_object.read()
-    print(contents.replace(str(9),"").replace(str(8), "").replace(str(7),"").replace(str(6), "").replace(str(5), "")\
-        .replace(str(4), "").replace(str(3), "").replace(str(2), "").replace(str(1), "").replace(str(0), "")\
-        .replace("%", "").lstrip("\t").replace("        ", ""))
+#with open(filename,"r") as file_object:
+#    """ Removes numbers and percentage symbol from text file """
+#    contents = file_object.read()
+#    print(contents.replace(str(9),"").replace(str(8), "").replace(str(7),"").replace(str(6), "").replace(str(5), "")\
+#        .replace(str(4), "").replace(str(3), "").replace(str(2), "").replace(str(1), "").replace(str(0), "")\
+#        .replace("%", "").lstrip("\t").replace("        ", ""))
 
 
 #class Female_email():
@@ -79,9 +79,43 @@ rd_me3 = rd_male_first_name + random.choice(symbols) + rd_last_name + "@" + rd_d
 
 rd_me = rd_me1, rd_me2, rd_me3
 
-def femail_email_genrator():
-    for pwd in range(number):
-        password = ''
-        for c in range(length):
-            password += random.choice(chars)
-        print(password)
+print('''
+Email Generator
+==================
+''')
+
+
+length = input('email total?')
+length = int(length)
+
+print('\nhere are your passwords:')
+
+for email in str(1):
+  email_address = ''
+  for c in range(length):
+    email_address += random.choice(rd_fe) + "\n"
+  print(email_address + "\n")
+
+
+############
+
+  def femail_email_genrator():
+    prompt = "Type y to generate an email / type quit to cancel code"
+    message = ""
+    while message != "quit":
+      message = input(prompt)
+
+      if message != "quit":
+        for email in rd_fe:
+          print(random.choice(rd_fe))
+
+femail_email_genrator()
+
+#########
+
+# Random email with male first name
+rd_me1 = rd_male_first_name + rd_last_name + "@" + rd_domain
+rd_me2 = rd_male_first_name + str(random.randrange(81,99)) + "@" + rd_domain
+rd_me3 = rd_male_first_name + random.choice(symbols) + rd_last_name + "@" + rd_domain
+
+rd_me = rd_me1, rd_me2, rd_me3

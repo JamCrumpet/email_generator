@@ -13,11 +13,9 @@ column_female_first_name = df_female_first_name["name"]
 column_last_name = df_last_names["lastname"]
 column_male_first_name = df_male_first_name["name"]
 
-female_email_address = []
-def fe_email():
-    for name in range(100):
-        rd_full_email = random.choice(column_female_first_name) + "@" + random.choice(column_domains)
-        female_email_address.append(rd_full_email + "\n")
+group = []
+for name in range(10):
+    rd_full_email = "".join(random.choice(column_female_first_name) + "@" + random.choice(column_domains))
+    group.append(rd_full_email + "\n")
 
-print(*female_email_address, sep="")
-
+print(*group, sep="")
